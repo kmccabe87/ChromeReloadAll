@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tab Reloader</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    button {
+      margin: 5px 0;
+    }
+    div {
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+    }
+    #status {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h3>Tab Reloader</h3>
+  <button id="reloadNow">Reload All Tabs Now</button>
+  <div>
+    <label><input type="checkbox" id="autoToggle"> Auto-Reload</label>
+    <label>Interval (minutes): <input type="number" id="autoInterval" value="5" min="1"></label>
+  </div>
+  <div>
+    <h4>Whitelist Domains (one per line)</h4>
+    <textarea id="whitelist" rows="4" placeholder="e.g., google.com"></textarea>
+    <button id="saveWhitelist">Save Whitelist</button>
+  </div>
+  <p id="status">Idle</p>
+  <script src="popup.js"></script>
+</body>
+</html>

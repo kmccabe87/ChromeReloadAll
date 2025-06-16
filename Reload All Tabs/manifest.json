@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Reloader",
+  "version": "1.2",
+  "description": "Reloads all open tabs with advanced options",
+  "permissions": ["tabs", "storage", "notifications", "contextMenus", "alarms", "audio"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Tab Reloader",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "128": "icon128.png"
+  },
+  "commands": {
+    "reload-all-tabs": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Command+Shift+R"
+      },
+      "description": "Reload all open tabs"
+    }
+  }
+}
